@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-item>
+    <ion-button (click)="cancel()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-title>New Project</ion-title>
+  </ion-item>
+</ion-header>
+
+
+<ion-content padding center text-center>
+  <ion-list>
+    <ion-item>
+      <ion-text color="medium">
+        <h4>
+          <ion-label position="floating">Project Name</ion-label>
+        </h4>
+        <ion-input type="text" value=""></ion-input>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-text color="medium">
+        <h4>
+          <ion-label position="stacked">CHOOSE DEVICE<ion-text color="danger">*</ion-text>
+          </ion-label>
+        </h4>
+        <ion-select interface="action-sheet">
+          <ion-select-option value="arduinoUNO">Arduino UNO</ion-select-option>
+          <ion-select-option value="arduinoMega">Arduino Mega</ion-select-option>
+          <ion-select-option value="raspberryPi3">Raspberry Pi 3</ion-select-option>
+          <ion-select-option value="nodeMCU">Node MCU</ion-select-option>
+        </ion-select>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-text color="medium">
+        <h4>
+          <ion-label position="stacked">CONNECTION TYPE<ion-text color="danger">*</ion-text>
+          </ion-label>
+        </h4>
+        <ion-select interface="action-sheet">
+          <ion-select-option value="wiFi">Wi-Fi</ion-select-option>
+          <ion-select-option value="usb">USB</ion-select-option>
+          <ion-select-option value="bluetooth">Bluetooth</ion-select-option>
+        </ion-select>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-button color="success" size="large" (click)="createProject()">Create Project</ion-button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
